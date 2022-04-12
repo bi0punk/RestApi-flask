@@ -16,6 +16,32 @@ def getProducts():
     return jsonify({'products': products})
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route('/products/<string:product_name>')
 def getProduct(product_name):
     productsFound = [
