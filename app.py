@@ -1,17 +1,65 @@
 from flask import Flask, jsonify, request
+from os import system
 
 app = Flask(__name__)
 
-from products import products
+from data import data
+
+
+@app.route('/')
+def lista():
+    dato = system("net start")
+    
+    print(type(dato))
+    return jsonify({dato})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Testing Route
 @app.route('/ping', methods=['GET'])
 def ping():
+
     return jsonify({'response': 'pong!'})
 
 # Get Data Routes
 @app.route('/products')
 def getProducts():
+
+
     # return jsonify(products)
     return jsonify({'products': products})
 
